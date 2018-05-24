@@ -122,6 +122,9 @@ diego-release:
 garden-release:
 	make/bosh-release src/garden-runc-release
 
+groot-btrfs-release:
+	make/bosh-release src/groot-btrfs/groot-btrfs-release
+
 mysql-release:
 	RUBY_VERSION=2.3.1 make/bosh-release src/cf-mysql-release
 
@@ -209,6 +212,7 @@ releases: \
 	dotnet-core-buildpack-release \
 	garden-release \
 	go-buildpack-release \
+	groot-btrfs \
 	java-buildpack-release \
 	loggregator-release \
 	mysql-release \
