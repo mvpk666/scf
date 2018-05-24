@@ -1479,6 +1479,8 @@ roles:
   - name: generate-secrets
     release_name: scf-helper
   processes: []
+  environment_scripts:
+  - scripts/configure-HA-hosts.sh
   run:
     scaling:
       min: 1
