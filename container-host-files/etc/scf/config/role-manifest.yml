@@ -1453,6 +1453,7 @@ roles:
       properties.scf.secrets.cert_expiration: ((CERT_EXPIRATION))
       properties.scf.secrets.domain: ((DOMAIN))
       properties.scf.secrets.generation: ((KUBE_SECRETS_GENERATION_COUNTER))
+      properties.scf.secrets.is_install: ((HELM_IS_INSTALL))
       properties.scf.secrets.name: ((KUBE_SECRETS_GENERATION_NAME))
       properties.scf.secrets.namespace: ((KUBERNETES_NAMESPACE))
       properties.scf.secrets.service_domain_suffix: ((KUBE_SERVICE_DOMAIN_SUFFIX))
@@ -1936,6 +1937,8 @@ configuration:
       The log level for go components. This parameter is not supposed to be set
       by the user. To change the cluster's log level set the parameter
       `LOG_LEVEL` instead, from which this one is derived.
+  - name: HELM_IS_INSTALL
+    type: environment
   - name: HOSTNAME
     description: >
       The host name of the container.  This should be automatic and should not
